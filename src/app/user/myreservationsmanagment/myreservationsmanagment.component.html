@@ -1,0 +1,59 @@
+<div class="reservations-management-container">
+    <h2>My Reservations Management</h2>
+    <div class="search-section">
+      <input type="date" [(ngModel)]="searchDate" placeholder="Date">
+      <input type="time" [(ngModel)]="searchTime" placeholder="Time">
+      <input type="text" [(ngModel)]="searchLocation" placeholder="Location">
+      <button (click)="onSearch()">Search</button>
+    </div>
+    <div *ngIf="reservations.length > 0" class="reservations-list">
+      <div *ngFor="let reservation of reservations" class="reservation-item" (click)="onSelectReservation(reservation)">
+        <h3>{{ reservation.stadium }}</h3>
+        <p>{{ reservation.date }} at {{ reservation.time }}</p>
+        <p>{{ reservation.location }}</p>
+      </div>
+    </div>
+    <div *ngIf="selectedReservation" class="reservation-details">
+      <h3>Edit Reservation</h3>
+      <form (ngSubmit)="onUpdateReservation()">
+        <div>
+          <label for="stadium">Stadium</label>
+          <input type="text" id="stadium" [(ngModel)]="selectedReservation.stadium" name="stadium">
+        </div>
+        <div>
+          <label for="date">Date</label>
+          <input type="date" id="date" [(ngModel)]="selectedReservation.date" name="date">
+        </div>
+        <div>
+          <label for="time">Time</label>
+          <input type="time" id="time" [(ngModel)]="selectedReservation.time" name="time">
+        </div>
+        <div>
+          <label for="location">Location</label>
+          <input type="text" id="location" [(ngModel)]="selectedReservation.location" name="location">
+        </div>
+        <div class="teams">
+          <div class="team">
+            <label for="myTeam">My Team</label>
+            <input type="text" id="myTeam" [(ngModel)]="selectedReservation.myTeam.name" name="myTeam">
+            <ul>
+              <li *ngFor="let player of selectedReservation.myTeam.players">
+                <input type="text" [value]="player" readonly>
+              </li>
+            </ul>
+          </div>
+          <div class="team">
+            <label for="opponentTeam">Opponent Team</label>
+            <input type="text" id="opponentTeam" [(ngModel)]="selectedReservation.opponentTeam.name" name="opponentTeam">
+            <ul>
+              <li *ngFor="let player of selectedReservation.opponentTeam.players">
+                <input type="text" [value]="player" readonly>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <button type="submit">Update Reservation</button>
+      </form>
+    </div>
+  </div>
+  

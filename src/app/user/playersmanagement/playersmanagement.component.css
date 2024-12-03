@@ -1,0 +1,99 @@
+.players-management-container {
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-section label {
+    color: #09faad;
+  }
+  
+  .search-section input {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .search-section button {
+    padding: 10px 15px;
+    background-color: #09faad;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-section button:hover {
+    background-color: #07c598;
+  }
+  
+  .reservations-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .reservations-list li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reservations-list li:hover {
+    background-color: #09faad;
+  }
+  
+  .reservation-details {
+    margin-top: 20px;
+  }
+  
+  .add-player-section {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .add-player-section .small-input {
+    padding: 3px; /* Smaller padding for smaller inputs */
+  }
+  
+  .add-player-section button {
+    padding: 5px 10px;
+    background-color: #09faad;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-player-section button:hover {
+    background-color: #07c598;
+  }
+  
+  .players-list .player-input {
+    padding: 10px; /* Larger padding for larger inputs */
+    font-size: 1rem; /* Adjust font size if needed */
+    margin-right: 10px;
+  }
+  
+  .reservation-details button {
+    padding: 10px 15px;
+    background-color: #09faad;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .reservation-details button:hover {
+    background-color: #07c598;
+  }
+  

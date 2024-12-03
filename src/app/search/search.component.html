@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Stadiums</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="search-header">
+        <div class="logo">
+            <img src="../../assets/logo/1-removebg-preview.png" alt="Logo">
+            <span>Stadium Booking</span>
+        </div>
+        <button class="back-home-button" onclick="window.location.href='index.html'">Back Home</button>
+    </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <p class="motivational-quote">"Find the best stadiums to play your favorite sport!"</p>
+            <p class="book-now">Book Now</p>
+        </div>
+    </div>
+    <section class="search-section">
+        <div class="search-container">
+            <div class="input-group location-group">
+                <label><i class="fas fa-map-marker-alt"></i> Choose Location</label>
+                <div class="dropdown">
+                    <input type="text" placeholder="Search Country" [(ngModel)]="searchQuery" class="search-input">
+                    <button class="dropbtn">{{ selectedCountry || 'Select Country' }}</button>
+                    <div class="dropdown-content">
+                        <a *ngFor="let country of getFilteredCountries()" (click)="selectCountry(country)">{{ country }}</a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="input-group">
+                <label for="date"><i class="fas fa-calendar-alt"></i> Choose Date</label>
+                <input type="date" id="date" name="date" [(ngModel)]="bookingDate">
+            </div>
+            <button class="continue-button" (click)="showTimeSelection()">Continue</button>
+        </div>
+        <img src="../../assets/logo/logo location.png" alt="Location Image" class="location-image">
+    </section>
+    <section class="time-section" [ngClass]="{'visible': showTimeSection}">
+        <div class="time-container">
+            
+            <div class="input-group">
+                <label for="time"><i class="fas fa-clock"></i> When would you like to book?</label>
+                <input type="time" id="time" name="time" [(ngModel)]="bookingTime" class="time-input">
+            </div>
+            <button class="continue-button2" (click)="continueBooking()">Continue</button>
+        </div>
+        <img src="../../assets/logo/time_logojpg-removebg-preview.png" alt="Time Image" class="time-image">
+    </section>
+</body>

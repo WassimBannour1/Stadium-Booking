@@ -1,0 +1,215 @@
+/* Background styling */
+.background {
+  background-image: url('C:/Users/WESSIM/Desktop/summer 24/stage/images/backgrounds/login/last.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Container size */
+div.containersize {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Text styling */
+.gras {
+  font-size: 65px;
+  font-family: fantasy;
+  color: white;
+}
+
+.welcome {
+  position: relative;
+  top: 170px;
+  left: 100px;
+  font-size: 40px;
+  color: white;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #4CAF50; /* Green border */
+  color: #00c17a; /* Green text */
+  border-radius: 10px;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: relative;
+  top: 50%;
+  left: 10.3%;
+  width: 10%;
+  height: 8%;
+}
+
+/* Hover state */
+.button:hover {
+  background-color: #03f16e; /* Green background */
+  color: white; /* White text */
+  border-color: #4caf86; /* Green border */
+}
+
+/* Active state (when clicked) */
+.button:active {
+  background-color: #45a049; /* Darker green background */
+  border-color: #45a049; /* Darker green border */
+}
+
+/* Disabled state */
+.button:disabled {
+  opacity: 0.6; /* Reduce opacity for disabled state */
+  cursor: not-allowed; /* Change cursor for disabled state */
+}
+
+.w {
+  font-size: 65px;
+  font-family: fantasy;
+  color: black;
+}
+
+.pre2 {
+  font-size: 40px;
+  color: black;
+  position: absolute;
+  top: 10%;
+  right: 18%;
+}
+
+form {
+  position: absolute;
+  top: 35%;
+  right: 15%;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #00c17a; /* Dark green color for label text */
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* Styles for input text fields */
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 2px solid #00c17a; /* Dark green border */
+  border-radius: 80px;
+  background-color: #e6ffe6; /* Light green background */
+  color: #333; /* Dark text color */
+  font-size: 30px;
+  outline: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  border-color: #32CD32; /* Lime green border on focus */
+  box-shadow: 0 0 5px rgba(50, 205, 50, 0.5); /* Light green glow on focus */
+}
+
+.img1 {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #00c17a;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  position: relative;
+  left: 68%;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #4CAF50; /* Green border */
+  color: white; /* Green text */
+  background-color: #00c17ac2;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  position: relative;
+  width: 30%;
+  height: 8%;
+  border-radius: 10px;
+}
+
+/* Hover state */
+.button2:hover {
+  background-color: #03f16e; /* Green background */
+  color: white; /* White text */
+  border-color: #4caf86; /* Green border */
+}
+
+/* Active state (when clicked) */
+.button2:active {
+  background-color: #45a049; /* Darker green background */
+  border-color: #45a049; /* Darker green border */
+}
+
+/* Disabled state */
+.button2:disabled {
+  opacity: 0.6; /* Reduce opacity for disabled state */
+  cursor: not-allowed; /* Change cursor for disabled state */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

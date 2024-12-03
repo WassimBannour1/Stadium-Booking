@@ -1,0 +1,111 @@
+.user-management {
+    padding: 20px;
+    background-color: #1c1c1c; /* Dark background */
+    border-radius: 8px;
+    max-width: 800px; /* Increased max-width */
+    margin: 0 auto;
+    color: #fff; /* White text */
+  }
+  
+  h2 {
+    color: #09faad; /* Special color */
+  }
+  
+  .search {
+    margin-bottom: 20px;
+  }
+  
+  .search input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #09faad; /* Special color border */
+    background-color: #333; /* Dark input background */
+    color: #fff; /* White text */
+  }
+  
+  .search ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search ul li {
+    padding: 10px;
+    background-color: #333; /* Dark list item background */
+    border: 1px solid #09faad; /* Special color border */
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .search ul li:hover {
+    background-color: #09faad; /* Special color background */
+    color: #1c1c1c; /* Dark text color */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .user-details {
+    background-color: #333; /* Dark background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .photo-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photo-section img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  
+  .form-section {
+    flex: 2;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #09faad; /* Special color */
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #09faad; /* Special color border */
+    background-color: #444; /* Dark input background */
+    color: #fff; /* White text */
+  }
+  
+  button {
+    background-color: #09faad; /* Special color */
+    color: #1c1c1c; /* Dark text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #06c18d; /* Slightly darker special color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  

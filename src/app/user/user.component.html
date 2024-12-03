@@ -1,0 +1,58 @@
+<div class="user-container">
+  <div class="user-content">
+    <nav class="dashboard">
+      <div class="logo">
+        <a [routerLink]="['/user']"><img src="../../assets/logo/1-removebg-preview.png" alt="Logo"></a>
+        <span>Stadium Booking</span>
+      </div>
+      <ul>
+        <li class="section-title" style="color: #09faad;">Player</li>
+        <li [class.active]="currentSection === 'checkmymatches'" (click)="navigateTo('checkmymatches')">
+          <i class="fas fa-calendar-check"></i> Check My Matches
+        </li>
+        <li class="section-title" style="color: #09faad;">Captain</li>
+        <li [class.active]="currentSection === 'myreservationsmanagment'" (click)="navigateTo('myreservationsmanagment')">
+          <i class="fas fa-tasks"></i> My Reservations Management
+        </li>
+        <li [class.active]="currentSection === 'playersmanagement'" (click)="navigateTo('playersmanagement')">
+          <i class="fas fa-users-cog"></i> Players Management
+        </li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <div class="top-bar">
+        <div class="notification">
+          <i class="fas fa-bell"></i>
+        </div>
+        <div class="user-profile" (click)="openUserProfile()">
+          <img class="user-image" src="../../assets/users/me.jpg" alt="User">
+        </div>
+      </div>
+      <div *ngIf="currentSection === 'user'" class="intro-section">
+        <div class="intro-text">
+          <h1>Hey!</h1>
+          <p>Sports are an excellent way to improve your physical and mental health. Regular physical activity can help you maintain a healthy weight, reduce the risk of chronic diseases, and improve your overall mood and mental well-being.</p>
+        </div>
+        <div class="intro-image">
+          <img src="../../assets/backgrounds/aboutus-football.png" alt="Sports Benefits">
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+      <div *ngIf="showUserProfile" class="modal">
+        <div class="modal-content">
+          <span class="close" (click)="closeUserProfile()">&times;</span>
+          <h3>{{ user.name }}</h3>
+          <p>{{ user.email }}</p>
+          <ul class="profile-options">
+            <li (click)="navigateTo('myaccount')">
+              <i class="fas fa-user"></i> My Account
+            </li>
+            <li (click)="logout()">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

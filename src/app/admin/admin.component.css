@@ -1,0 +1,236 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #333;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.admin-content {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard {
+  width: 250px;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard .logo img {
+  height: 40px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.dashboard .logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.dashboard ul {
+  list-style: none;
+  width: 100%;
+}
+
+.dashboard ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard ul li:hover {
+  background-color: #09faad;
+}
+
+.dashboard ul li.active {
+  background-color: #09faad;
+}
+
+.dashboard ul li i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.main-content h1 {
+  color: #09faad;
+  margin-bottom: 20px;
+}
+
+.stats-section {
+  width: 100%;
+}
+
+.stats-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stats-card {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(33.333% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.stats-card:hover {
+  background-color: #09faad;
+}
+
+.stats-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.stats-info {
+  color: white;
+}
+
+.stats-info h2 {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.stats-info p {
+  font-size: 18px;
+}
+
+canvas {
+  width: 100% !important;
+  max-width: 600px;
+  height: auto !important;
+  margin-top: 20px;
+}
+
+/* Modal Styling */
+.modal {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.profile-options {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.profile-options li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-options li:hover {
+  color: #09faad;
+}
+
+.profile-options li i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.logout-button {
+  background-color: #09faad;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #07c598;
+}

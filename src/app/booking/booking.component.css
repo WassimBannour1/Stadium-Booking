@@ -1,0 +1,198 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header styling */
+.booking-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Added to space logo and nav apart */
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.booking-header .logo {
+  display: flex;
+  align-items: center;
+}
+
+.booking-header .logo img {
+  height: 40px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.booking-header .logo span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Main navigation styling */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  background-color: #0c7a45;
+  border-radius: 4px;
+}
+
+/* Stadium details section styling */
+.stadium-details-section {
+  background-image: url(../../assets/backgrounds/booking-background.jpg);
+  background-color: #f0f0f0; /* Fallback color */
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.stadium-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stadium-details-container h2 {
+  margin-bottom: 20px;
+  color: #0f9d58;
+}
+
+.stadium-details-container p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Team setup section styling */
+.team-setup-section {
+  background-color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.team-setup-container {
+  max-width: 800px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.team-setup-container h2 {
+  margin-bottom: 20px;
+  color: #0f9d58;
+}
+
+.inputs-section {
+  flex: 1;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.add-player-button, .book-button {
+  background-color: #0f9d58;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.add-player-button:hover, .book-button:hover {
+  background-color: #0c7a45;
+}
+
+.jour-affichage {
+  flex: 1;
+  background-color: #d4edda; /* Bootstrap's success color */
+  border: 1px solid #c3e6cb; /* Bootstrap's success border color */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.jour-affichage h3 {
+  color: #155724; /* Bootstrap's success text color */
+  margin-bottom: 10px;
+}
+
+.jour-affichage table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 20px;
+}
+
+.jour-affichage th, .jour-affichage td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.jour-affichage th {
+  background-color: #f2f2f2;
+}
+
+.jour-affichage td {
+  background-color: #d4edda; /* Bootstrap's success background color */
+}
+
+.jour-affichage tr:nth-child(even) {
+  background-color: #e9f7ef;
+}
+
+.player-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

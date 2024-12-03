@@ -1,0 +1,49 @@
+<div class="players-management-container">
+    <div class="search-section">
+      <label for="searchDate">Date:</label>
+      <input type="date" id="searchDate" [(ngModel)]="searchDate">
+      
+      <label for="searchTime">Time:</label>
+      <input type="time" id="searchTime" [(ngModel)]="searchTime">
+      
+      <label for="searchLocation">Location:</label>
+      <input type="text" id="searchLocation" [(ngModel)]="searchLocation">
+      
+      <button (click)="onSearch()">Search</button>
+    </div>
+    
+    <div *ngIf="reservations.length > 0" class="reservations-list">
+      <h3>Reservations:</h3>
+      <ul>
+        <li *ngFor="let reservation of reservations" (click)="onSelectReservation(reservation)">
+          Stadium: {{ reservation.stadium }} | Date: {{ reservation.date }} | Time: {{ reservation.time }} | Location: {{ reservation.location }}
+        </li>
+      </ul>
+    </div>
+    
+    <div *ngIf="selectedReservation" class="reservation-details">
+      <h3>Reservation Details:</h3>
+      <p>Stadium: {{ selectedReservation.stadium }}</p>
+      <p>Date: {{ selectedReservation.date }}</p>
+      <p>Time: {{ selectedReservation.time }}</p>
+      <p>Location: {{ selectedReservation.location }}</p>
+      
+      <h4>My Team: {{ selectedReservation.myTeam.name }}</h4>
+      <ul class="players-list">
+        <li *ngFor="let player of selectedReservation.myTeam.players; let i = index">
+          <input type="text" [(ngModel)]="player.name" class="player-input">
+          <input type="text" [(ngModel)]="player.position" class="player-input">
+          <button (click)="removePlayer(i)">Remove</button>
+        </li>
+      </ul>
+      
+      <div class="add-player-section">
+        <input type="text" placeholder="Player Name" [(ngModel)]="newPlayer" class="small-input">
+        <input type="text" placeholder="Position" [(ngModel)]="newPosition" class="small-input">
+        <button (click)="addPlayer()">Add Player</button>
+      </div>
+      
+      <button (click)="onUpdateReservation()">Update Reservation</button>
+    </div>
+  </div>
+  

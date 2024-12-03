@@ -1,0 +1,77 @@
+<div class="admin-container">
+  <div class="admin-content">
+    <nav class="dashboard">
+      <div class="logo">
+        <a [routerLink]="['/admin']"><img src="../../assets/logo/1-removebg-preview.png" alt="Logo"></a>
+        <span>Stadium Booking</span>
+      </div>
+      <ul>
+        <li [class.active]="currentSection === 'stadium-management'" (click)="navigateTo('stadium-management')">
+          <i class="fas fa-futbol"></i> Stadium Management
+        </li>
+        <li [class.active]="currentSection === 'user-management'" (click)="navigateTo('user-management')">
+          <i class="fas fa-users"></i> User Management
+        </li>
+        <li [class.active]="currentSection === 'reservation-management'" (click)="navigateTo('reservation-management')">
+          <i class="fas fa-calendar-check"></i> Reservation Management
+        </li>
+        <li [class.active]="currentSection === 'calendar-management'" (click)="navigateTo('calendar-management')">
+          <i class="fas fa-calendar"></i> Calendar Management
+        </li>
+      </ul>
+    </nav>
+    <main class="main-content">
+      <div class="top-bar">
+        <div class="notification">
+          <i class="fas fa-bell"></i>
+        </div>
+        <div class="user-profile" (click)="openUserProfile()">
+          <img class="user-image" src="../../assets/users/me.jpg" alt="User">
+        </div>
+      </div>
+      <div *ngIf="router.url === '/admin'" class="stats-section">
+        <h1>Hey, dear admin!</h1>
+        <div class="stats-cards">
+          <div class="stats-card">
+            <i class="fas fa-users stats-icon"></i>
+            <div class="stats-info">
+              <h2>{{ numberOfUsers }}</h2>
+              <p>Users</p>
+            </div>
+          </div>
+          <div class="stats-card">
+            <i class="fas fa-futbol stats-icon"></i>
+            <div class="stats-info">
+              <h2>{{ numberOfStadiums }}</h2>
+              <p>Stadiums</p>
+            </div>
+          </div>
+          <div class="stats-card">
+            <i class="fas fa-calendar-check stats-icon"></i>
+            <div class="stats-info">
+              <h2>{{ matchesPerDay }}</h2>
+              <p>Matches Per Day</p>
+            </div>
+          </div>
+        </div>
+        <canvas id="matchesChart"></canvas>
+      </div>
+      <router-outlet></router-outlet>
+      <div *ngIf="showUserProfile" class="modal">
+        <div class="modal-content">
+          <span class="close" (click)="closeUserProfile()">&times;</span>
+          <h3>{{ admin.name }}</h3>
+          <p>{{ admin.email }}</p>
+          <ul class="profile-options">
+            <li (click)="navigateTo('myaccount')">
+              <i class="fas fa-user"></i> My Account
+            </li>
+            <li (click)="logout()">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

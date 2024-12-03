@@ -1,0 +1,70 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body class="background">
+  <div class="containersize">
+    <pre class="welcome" style="font-size: 40px;color: white;">
+      welcome to 
+      <div class="gras">stadium booking</div>
+   we make it for you
+    </pre>
+
+    <img src="../../assets/logo/1-removebg-preview.png" width="300px" height="300px" class="img1">
+    <button (click)="navigateToSignInPage()" class="button">Sign in</button>
+  </div>
+  <pre class="pre2"> sign up to 
+    <div class="w">stadium booking</div> </pre>
+  <form (ngSubmit)="onSubmit()">
+    <table>
+      <tr>
+        <td><label for="fullName">Full Name:</label><br>
+          <input type="text" id="fullName" [(ngModel)]="user.fullName" name="fullName"><br>
+        </td>
+        <td>
+          <label for="cin">CIN:</label><br>
+          <input type="text" id="cin" [(ngModel)]="user.cin" name="cin"><br>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2"><label for="email">Email:</label><br>
+          <input type="text" id="email" class="long" [(ngModel)]="user.email" name="email"><br>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label><br>
+          <input class="password" size="20px" type="password" id="password" [(ngModel)]="user.password" name="password"><br>
+        </td>
+        <td>
+          <label for="confirmPassword">Confirm Password:</label><br>
+          <input size="20px" class="password" type="password" id="confirmPassword" [(ngModel)]="user.confirmPassword" name="confirmPassword"><br>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <label for="phoneNumber">Phone Number:</label><br>
+          <input type="text" id="phoneNumber" [(ngModel)]="user.phoneNumber" name="phoneNumber"><br>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="securityQuestion">Security Question:</label><br>
+          <input size="20px" type="text" id="securityQuestion" [(ngModel)]="user.securityQuestion" name="securityQuestion"><br>
+        </td>
+        <td>
+          <label for="securityAnswer">Answer:</label><br>
+          <input size="20px" type="text" id="securityAnswer" [(ngModel)]="user.securityAnswer" name="securityAnswer"><br>
+        </td>
+      </tr>
+    </table>
+    <span id="terms"><input type="checkbox" name="" id="checkbox"> By signing up, you agree to our terms and conditions.</span>
+    <button class="button2" type="submit">Sign up</button>
+  </form>
+
+  <!-- Modal -->
+  <div *ngIf="showModal" class="modal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <p>Account successfully created!</p>
+      <button (click)="navigateToHomePage()" class="modal-button">Go to Home</button>
+      <button (click)="navigateToSignInPage()" class="modal-button">Go to Sign In</button>
+    </div>
+  </div>
+</body>

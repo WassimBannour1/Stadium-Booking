@@ -1,0 +1,69 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stadium Booking</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <img src="../../assets/logo/1-removebg-preview.png" alt="Logo">
+            <span>Stadium Booking</span>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="login-button">
+            <a routerLink="/signin">Login</a>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-content">
+            <p class="motivational-phrase">"Feel the thrill of soccer and football in the best stadiums!"</p>
+            <a (click)="navigateTosearchPage()" class="search-button">Search Stadiums</a>
+        </div>
+    </div>
+    <section id="about-us" class="about-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="../../assets/backgrounds/aboutus-football.png" alt="About Us Image">
+            </div>
+            <div class="about-text">
+                <h2>Nice to Meet You</h2>
+                <p>Welcome to <b>Stadium Booking</b>, your ultimate platform for finding and booking stadiums worldwide. Our mission is to make it effortless for you to organize football matches with your friends or teams, ensuring that you always have access to the best facilities and pitches. Whether you're planning a casual game or a competitive match, Stadium Booking is here to help you make it happen.</p>
+                <p>By using our platform, you can easily search for available stadiums, check their amenities, and secure bookings hassle-free. Join our community of sports enthusiasts and experience the convenience of modern stadium booking today!</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact-us" class="contact-section">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <ul class="contact-details">
+                <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +21694101910</li>
+                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:wisoghost@gmail.com">wisoghostgmail.com</a></li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Monastir</li>
+                <li><i class="fab fa-facebook"></i> <strong>Facebook:</strong> <a href="https://www.facebook.com/yassin.trabelsi.9081/" target="_blank">wassim bannour</a></li>
+            </ul>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>

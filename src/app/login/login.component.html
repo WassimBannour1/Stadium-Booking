@@ -1,0 +1,44 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<body class="background" >
+    <div class="containersize" >
+        <pre class="welcome" style="font-size: 40px;color: white; ">       
+    welcome to 
+            <div class="gras">stadium booking</div>   
+    we make it for you
+        </pre>
+
+        <img src="../../assets/logo/1-removebg-preview.png" width="250px" height="250px"  class="img1">
+        <button (click)="navigateToSignUpPage()" class="button">Sign up</button>
+    </div>
+    <pre class="pre2">     
+        sign in to
+         <div class="w">stadium booking</div>  
+    </pre>
+    <form (submit)="onSubmit()">
+        <table>
+            <tr>
+                <td>
+                    <label for="email">email:</label><br>
+                    <input type="text" id="email" [(ngModel)]="email" name="email"><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="password">password:</label><br>
+                    <input size="40px" type="password" id="password" [(ngModel)]="password" name="password"><br>
+                </td>
+            </tr>
+        </table>
+        <a [routerLink]="'/forgetpassword'">forget password?</a> <br> <br>
+        <button type="submit" class="button2">sign in</button>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal" [ngClass]="{'show': showModal}">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <p>{{ modalMessage }}</p>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,27 @@
+<div class="calendar-management">
+    <h2 style="color: #09faad ;">Calendar Management</h2>
+    <div class="date-selector">
+      <label for="selectedDate" style="color: #09faad;">Select Date:</label>
+      <input type="date" id="selectedDate" (change)="selectDate($event)">
+    </div>
+    <div class="calendar">
+      <div *ngIf="selectedEvent" class="calendar-day">
+        <h3 style="color: white;">{{ selectedEvent.date | date:'mediumDate' }}</h3>
+        <p style="color: #09faad;">Season: {{ selectedEvent.season }}</p>
+        <div class="hours-info">
+          <div class="input-group">
+            <label  style="color: #09faad;" for="availableHours">Available Hours:</label>
+            <input type="number" id="availableHours" [(ngModel)]="selectedEvent.availableHours" (change)="updateAvailableHours(selectedEvent.availableHours)">
+          </div>
+          <div class="input-group">
+            <label for="reservedHours" style="color: #09faad;">Reserved Hours:</label>
+            <input type="number" id="reservedHours" [(ngModel)]="selectedEvent.reservedHours" (change)="updateReservedHours(selectedEvent.reservedHours)">
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!selectedEvent" class="no-events">
+        No events found for the selected date.
+      </div>
+    </div>
+  </div>
+  

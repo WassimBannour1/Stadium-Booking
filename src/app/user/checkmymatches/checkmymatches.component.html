@@ -1,0 +1,32 @@
+<div class="check-my-matches-container">
+    <div class="fixed-logo">
+      <img src="assets/logo/1-removebg-preview.png" alt="Logo">
+    </div>
+    <h2>Check My Matches</h2>
+    <div class="search-section">
+      <input type="date" (change)="onSearchDate($event)">
+      <input type="time" (change)="onSearchTime($event)">
+      <button (click)="onSearch()">Search</button>
+    </div>
+    <div *ngIf="matches.length > 0" class="matches-list">
+      <div *ngFor="let match of matches" class="match-details">
+        <h3>{{ match.stadium }}</h3>
+        <p>{{ match.date }} at {{ match.time }}</p>
+        <div class="teams">
+          <div class="team">
+            <h4>{{ match.myTeam.name }}</h4>
+            <ul>
+              <li *ngFor="let player of match.myTeam.players">{{ player }}</li>
+            </ul>
+          </div>
+          <div class="team">
+            <h4>{{ match.opponentTeam.name }}</h4>
+            <ul>
+              <li *ngFor="let player of match.opponentTeam.players">{{ player }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

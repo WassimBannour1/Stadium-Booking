@@ -1,0 +1,214 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #333;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.user-content {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard {
+  width: 250px;
+  background-color: black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard .logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard .logo img {
+  height: 40px;
+  width: 60px;
+  margin-right: 10px;
+}
+
+.dashboard .logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.dashboard ul {
+  list-style: none;
+  width: 100%;
+}
+
+.dashboard ul li {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard ul li:hover:not(.section-title) {
+  background-color: #09faad;
+}
+
+.dashboard ul li.active {
+  background-color: #09faad;
+}
+
+.dashboard ul li i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.dashboard .section-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #09faad;
+  margin: 15px 0 5px 0;
+  cursor: default;
+}
+
+.main-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.notification {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.user-profile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Modal Styling */
+.modal {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.profile-options {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.profile-options li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.profile-options li:hover {
+  color: #09faad;
+}
+
+.profile-options li i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.logout-button {
+  background-color: #09faad;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #07c598;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  max-width: 60%;
+}
+
+.intro-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #09faad;
+}
+
+.intro-text p {
+  font-size: 18px;
+  color: #fff;
+}
+
+.intro-image img {
+  max-width: 300px;
+  border-radius: 10px;
+}

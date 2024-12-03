@@ -1,0 +1,55 @@
+<div class="user-management">
+    <h2>User Management</h2>
+    <div class="search">
+      <input type="text" placeholder="Search User" (input)="onSearch($event)">
+      <ul>
+        <li *ngFor="let user of users" (click)="onSelectUser(user)">
+          {{ user.fullName }}
+        </li>
+      </ul>
+    </div>
+    <div class="user-details" *ngIf="selectedUser">
+      <h3>Edit User Details</h3>
+      <div class="details-container">
+        <div class="photo-section">
+          <img [src]="selectedUser.photoUrl || 'assets/placeholder.jpg'" alt="{{ selectedUser.fullName }}" />
+        </div>
+        <div class="form-section">
+          <div class="input-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" [(ngModel)]="newFullName">
+          </div>
+          <div class="input-group">
+            <label for="CIN">CIN:</label>
+            <input type="text" id="CIN" [(ngModel)]="newCIN">
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" [(ngModel)]="newEmail">
+          </div>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" [(ngModel)]="newPassword">
+          </div>
+          <div class="input-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" [(ngModel)]="newConfirmPassword">
+          </div>
+          <div class="input-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" [(ngModel)]="newPhoneNumber">
+          </div>
+          <div class="input-group">
+            <label for="securityQuestion">Security Question:</label>
+            <input type="text" id="securityQuestion" [(ngModel)]="newSecurityQuestion">
+          </div>
+          <div class="input-group">
+            <label for="answer">Answer:</label>
+            <input type="text" id="answer" [(ngModel)]="newAnswer">
+          </div>
+          <button (click)="onSave()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
